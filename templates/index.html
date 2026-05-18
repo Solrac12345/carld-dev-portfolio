@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solrac_Agent</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10b981",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .ai-glow { box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3); }
+        .chat::-webkit-scrollbar { width: 6px; }
+        .chat::-webkit-scrollbar-track { background: transparent; }
+        .chat::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-100 min-h-screen selection:bg-primary/30">
+
+    <!-- Floating Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 py-3">
+        <nav class="max-w-3xl mx-auto flex items-center justify-between glass-card rounded-full px-6 py-2 shadow-lg">
+            <div class="flex items-center gap-3">
+                <div class="size-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">CT</div>
+                <span class="font-bold tracking-tight hidden sm:block">Carlos Tamayo</span>
+            </div>
+            <div class="flex items-center gap-1 text-xs font-bold bg-white/10 rounded-full p-1">
+                <button class="lang-btn px-3 py-1 rounded-full bg-primary text-white transition-colors" data-lang="en">EN</button>
+                <button class="lang-btn px-3 py-1 rounded-full text-slate-400 hover:text-white transition-colors" data-lang="fr">FR</button>
+                <button class="lang-btn px-3 py-1 rounded-full text-slate-400 hover:text-white transition-colors" data-lang="es">ES</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-8 max-w-3xl mx-auto px-4 flex flex-col" style="height: 100dvh;">
+
+        <!-- Title -->
+        <div class="text-center mb-6">
+            <h1 id="title" class="text-3xl font-extrabold tracking-tight">
+                <span class="text-primary">Agent</span>
+            </h1>
+            <p id="subtitle" class="text-slate-400 text-sm mt-1">Ask questions about me</p>
+        </div>
+
+        <!-- Chat Area -->
+        <div id="chat" class="chat flex-1 glass-card rounded-3xl p-6 overflow-y-auto space-y-4 mb-4 ai-glow"></div>
+
+        <!-- Input Bar -->
+        <form id="ask-form" class="flex gap-3">
+            <input
+                type="text"
+                id="question"
+                placeholder="Ask a question..."
+                autocomplete="off"
+                required
+                class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-5 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
+            >
+            <button
+                type="submit"
+                id="send-btn"
+                class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-2xl transition-all shadow-lg shadow-primary/20 flex items-center gap-2"
+            >
+                <span class="hidden sm:inline">Send</span>
+                <span class="material-symbols-outlined text-sm">send</span>
+            </button>
+        </form>
+
+    </main>
+
+    <script>
+        const chat = document.getElementById("chat");
+        const form = document.getElementById("ask-form");
+        const input = document.getElementById("question");
+
+        const PORTFOLIO_URL = "/portfolio";
+
+        const i18n = {
+            en: {
+                title: "Agent",
+                subtitle: "Ask questions about me",
+                placeholder: "Ask a question...",
+                send: "Send",
+                greeting: "Hi there! This is Carlos. What do you want to know about me?",
+                portfolioQ: "Do you want to see my portfolio?",
+                portfolioA: 'Here is my portfolio: <a href="' + PORTFOLIO_URL + '" target="_blank" class="text-primary hover:underline font-semibold">' + PORTFOLIO_URL + '</a>',
+                errorConnect: "Error connecting to server."
+            },
+            fr: {
+                title: "Agent",
+                subtitle: "Posez-moi des questions",
+                placeholder: "Posez une question...",
+                send: "Envoyer",
+                greeting: "Bonjour ! Je suis Carlos. Que voulez-vous savoir sur moi ?",
+                portfolioQ: "Voulez-vous voir mon portfolio ?",
+                portfolioA: 'Voici mon portfolio : <a href="' + PORTFOLIO_URL + '" target="_blank" class="text-primary hover:underline font-semibold">' + PORTFOLIO_URL + '</a>',
+                errorConnect: "Erreur de connexion au serveur."
+            },
+            es: {
+                title: "Agente",
+                subtitle: "Hazme preguntas",
+                placeholder: "Haz una pregunta...",
+                send: "Enviar",
+                greeting: "¡Hola! Soy Carlos. ¿Qué quieres saber sobre mí?",
+                portfolioQ: "¿Quieres ver mi portafolio?",
+                portfolioA: 'Aquí está mi portafolio: <a href="' + PORTFOLIO_URL + '" target="_blank" class="text-primary hover:underline font-semibold">' + PORTFOLIO_URL + '</a>',
+                errorConnect: "Error al conectar con el servidor."
+            }
+        };
+
+        let currentLang = "en";
+        let suggestionPool = [];
+
+        function t(key) {
+            return i18n[currentLang][key];
+        }
+
+        function addMessage(content, cls) {
+            const div = document.createElement("div");
+            if (cls === "user") {
+                div.className = "flex justify-end";
+                div.innerHTML = '<div class="bg-primary/20 border border-primary/30 text-white rounded-2xl rounded-br-md px-4 py-3 max-w-[80%] text-sm leading-relaxed">' + content + '</div>';
+            } else if (cls === "bot") {
+                div.className = "flex justify-start";
+                div.innerHTML = '<div class="flex gap-3 max-w-[85%]"><div class="size-8 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center flex-shrink-0 mt-1"><span class="material-symbols-outlined text-primary text-sm">smart_toy</span></div><div class="bg-white/5 border border-white/5 text-slate-200 rounded-2xl rounded-bl-md px-4 py-3 text-sm leading-relaxed">' + content + '</div></div>';
+            } else if (cls === "error") {
+                div.className = "flex justify-start";
+                div.innerHTML = '<div class="bg-red-500/10 border border-red-500/20 text-red-300 rounded-2xl px-4 py-3 max-w-[80%] text-sm">' + content + '</div>';
+            }
+            chat.appendChild(div);
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        function removeChips() {
+            const old = document.querySelector(".suggestions");
+            if (old) old.remove();
+        }
+
+        function showSuggestions() {
+            removeChips();
+            const picked = suggestionPool.splice(0, 2);
+            const toShow = [...picked, t("portfolioQ")];
+
+            const wrapper = document.createElement("div");
+            wrapper.className = "suggestions flex flex-wrap gap-2 mt-2";
+            toShow.forEach(q => {
+                const chip = document.createElement("button");
+                chip.className = "px-4 py-2 rounded-full text-xs font-bold border border-primary/30 text-primary bg-primary/5 hover:bg-primary/20 transition-all cursor-pointer";
+                chip.textContent = q;
+                chip.addEventListener("click", () => {
+                    removeChips();
+                    if (q === t("portfolioQ")) {
+                        addMessage(q, "user");
+                        addMessage(t("portfolioA"), "bot");
+                    } else {
+                        handleQuestion(q);
+                    }
+                });
+                wrapper.appendChild(chip);
+            });
+            chat.appendChild(wrapper);
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        async function handleQuestion(question) {
+            addMessage(question, "user");
+            try {
+                const res = await fetch("/ask", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ question, lang: currentLang }),
+                });
+                const data = await res.json();
+                if (data.error) {
+                    addMessage(data.error, "error");
+                } else {
+                    const escaped = data.answer.replace(/\n/g, "<br>");
+                    addMessage(escaped, "bot");
+                    showSuggestions();
+                }
+            } catch (err) {
+                addMessage(t("errorConnect"), "error");
+            }
+        }
+
+        async function loadSuggestions() {
+            try {
+                const res = await fetch("/suggestions?lang=" + currentLang);
+                const data = await res.json();
+                if (data.suggestions) {
+                    suggestionPool = data.suggestions.slice(0, 5);
+                }
+            } catch (e) {}
+            showSuggestions();
+        }
+
+        function applyLanguage() {
+            document.getElementById("title").innerHTML = '<span class="text-primary">' + t("title") + '</span>';
+            document.getElementById("subtitle").textContent = t("subtitle");
+            input.placeholder = t("placeholder");
+            document.getElementById("send-btn").querySelector(".hidden, span:first-child")?.remove();
+            const label = document.getElementById("send-btn").querySelector("span.hidden");
+            if (label) label.textContent = t("send");
+        }
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll(".lang-btn").forEach(btn => {
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add("bg-primary", "text-white");
+                    btn.classList.remove("text-slate-400");
+                } else {
+                    btn.classList.remove("bg-primary", "text-white");
+                    btn.classList.add("text-slate-400");
+                }
+            });
+            applyLanguage();
+            chat.innerHTML = "";
+            suggestionPool = [];
+            addMessage(t("greeting"), "bot");
+            loadSuggestions();
+        }
+
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+            btn.addEventListener("click", () => switchLanguage(btn.dataset.lang));
+        });
+
+        // Initial load
+        addMessage(t("greeting"), "bot");
+        loadSuggestions();
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const question = input.value.trim();
+            if (!question) return;
+            input.value = "";
+            removeChips();
+            handleQuestion(question);
+        });
+    </script>
+</body>
+</html>
