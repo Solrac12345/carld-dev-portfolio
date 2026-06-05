@@ -1,19 +1,12 @@
 <!doctype html>
-
 <html class="dark" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Carlos David Tamayo Montañez| AI Developer Portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
+    <title>Carlos David Tamayo Montañez | AI Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -40,7 +33,8 @@
     <style>
       body {
         font-family: "Manrope", sans-serif;
-        min-height: max(884px, 100dvh);
+        min-height: 100dvh;
+        padding-bottom: env(safe-area-inset-bottom);
       }
       .glass-card {
         background: rgba(255, 255, 255, 0.03);
@@ -50,732 +44,364 @@
       .ai-glow {
         box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3);
       }
+      /* Ensure all content stays centered and doesn't overflow */
+      main {
+        overflow-x: hidden;
+      }
+      h1, h2, h3, p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
     </style>
   </head>
-  <body
-    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen selection:bg-primary/30"
-  >
+  <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen selection:bg-primary/30">
     <!-- Floating Header -->
     <header class="fixed top-0 left-0 right-0 z-50 px-4 py-3">
-      <nav
-        class="max-w-5xl mx-auto flex items-center justify-between glass-card rounded-full px-6 py-2 shadow-lg"
-      >
+      <nav class="max-w-5xl mx-auto flex items-center justify-between glass-card rounded-full px-6 py-2 shadow-lg">
         <div class="flex items-center gap-3">
-          <div
-            class="size-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm"
-          >
-            CT
-          </div>
-          <span class="font-bold tracking-tight hidden sm:block"
-            >Carlos David Tamayo Montañez</span
-          >
+          <div class="size-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">CT</div>
+          <span class="font-bold tracking-tight hidden sm:block">Carlos David Tamayo Montañez</span>
         </div>
         <div class="flex items-center gap-6">
-          <div
-            class="flex items-center gap-1 text-xs font-bold bg-background-dark/50 dark:bg-white/10 rounded-full p-1"
-          >
-            <button
-              class="lang-btn px-3 py-1 rounded-full bg-primary text-white transition-colors"
-              data-lang="en"
-            >
-              EN
-            </button>
-            <button
-              class="lang-btn px-3 py-1 rounded-full text-slate-400 hover:text-white transition-colors"
-              data-lang="fr"
-            >
-              FR
-            </button>
-            <button
-              class="lang-btn px-3 py-1 rounded-full text-slate-400 hover:text-white transition-colors"
-              data-lang="es"
-            >
-              ES
-            </button>
+          <div class="flex items-center gap-1 text-xs font-bold bg-background-dark/50 dark:bg-white/10 rounded-full p-1">
+            <button class="lang-btn px-3 py-1 rounded-full bg-primary text-white transition-colors" data-lang="en">EN</button>
+            <button class="lang-btn px-3 py-1 rounded-full text-slate-400 hover:text-white transition-colors" data-lang="fr">FR</button>
+            <button class="lang-btn px-3 py-1 rounded-full text-slate-400 hover:text-white transition-colors" data-lang="es">ES</button>
           </div>
-          <a
-            class="material-symbols-outlined text-primary scale-110"
-            href="#contact"
-            >alternate_email</a
-          >
+          <a class="material-symbols-outlined text-primary scale-110" href="#contact">alternate_email</a>
         </div>
       </nav>
     </header>
+
     <main class="pt-24 pb-32 max-w-5xl mx-auto px-4 space-y-24">
       <!-- Hero Section -->
       <section class="relative py-12 @container">
-        <div
-          class="absolute -top-24 -left-24 size-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"
-        ></div>
-        <div
-          class="absolute top-48 -right-24 size-80 rounded-full blur-[100px] pointer-events-none bg-emerald-500/5"
-        ></div>
+        <div class="absolute -top-24 -left-24 size-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-48 -right-24 size-80 rounded-full blur-[100px] pointer-events-none bg-emerald-500/5"></div>
         <div class="flex flex-col items-center text-center gap-8 relative z-10">
           <div class="relative">
-            <div
-              class="size-32 @[480px]:size-40 rounded-full p-1 bg-gradient-to-tr ai-glow from-emerald-400 to-primary"
-            >
+            <div class="size-32 @[480px]:size-40 rounded-full p-1 bg-gradient-to-tr ai-glow from-emerald-400 to-primary">
               <div class="size-full rounded-full overflow-hidden">
-                <img
-                  class="w-full h-full object-cover"
-                  alt="Professional portrait of Carlos Tamayo"
-                  src="/static/images/photo.png"
-                />
+                <img class="w-full h-full object-cover" alt="Professional portrait of Carlos Tamayo" src="/static/images/photo.png" />
               </div>
             </div>
-            <div
-              class="absolute bottom-2 right-2 size-6 bg-green-500 rounded-full border-4 border-background-dark"
-            ></div>
-            
+            <div class="absolute bottom-2 right-2 size-6 bg-green-500 rounded-full border-4 border-background-dark"></div>
           </div>
-          <!-- Availability Section -->
-          <span class="font-bold tracking-tight hidden sm:block"> #OPENTOWORK </span>
+          <span class="font-bold tracking-tight hidden sm:block">#OPENTOWORK</span>
           <div class="space-y-4 max-w-3xl">
-            <h1
-              class="text-4xl @[480px]:text-6xl font-extrabold tracking-tight leading-[1.1]"
-              data-i18n="hero_title"
-            >
+            <h1 class="text-3xl @[480px]:text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1]" data-i18n="hero_title">
               Turning Ideas Into Scalable,
               <span class="text-primary">Real&#8209;World Systems</span>
             </h1>
-            <p class="text-lg text-slate-400 font-medium">
-              Python &bull; AI &bull; Machine Learning &bull; Automation
-            </p>
+            <p class="text-base sm:text-lg text-slate-400 font-medium">Python &bull; AI &bull; Machine Learning &bull; Automation</p>
           </div>
-          <div class="flex flex-wrap justify-center gap-4">
-            <button
-              class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center gap-2"
-              data-i18n="hero_projects"
-              onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})"
-            >
+          <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
+            <button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2" data-i18n="hero_projects" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
               View Projects
-              <span class="material-symbols-outlined text-sm"
-                >arrow_downward</span
-              >
+              <span class="material-symbols-outlined text-sm">arrow_downward</span>
             </button>
-            <a
-              id="resume-link"
-              class="glass-card hover:bg-white/5 text-white font-bold py-3 px-8 rounded-xl transition-all flex items-center gap-2 border border-white/10"
-              data-i18n="hero_resume"
-              data-i18n-title="resume_tooltip"
-            >
+            <a id="resume-link" class="glass-card hover:bg-white/5 text-white font-bold py-3 px-8 rounded-xl transition-all flex items-center justify-center gap-2 border border-white/10" data-i18n="hero_resume" data-i18n-title="resume_tooltip">
               Resume <span class="material-symbols-outlined text-sm">description</span>
             </a>
           </div>
         </div>
       </section>
+
       <!-- About Section -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider"
-          >
+        <div class="space-y-6 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider">
             <span class="material-symbols-outlined text-xs">person</span>
             <span data-i18n="about_badge">About Me</span>
           </div>
-          <h2 class="text-3xl font-bold" data-i18n="about_title">
-            Bridging Mechatronics and AI
-          </h2>
+          <h2 class="text-3xl font-bold" data-i18n="about_title">Bridging Mechatronics and AI</h2>
           <div class="space-y-4 text-slate-400 leading-relaxed text-lg">
             <p data-i18n="about_p1">
-              With a background in
-              <span class="text-white font-semibold">mechatronics</span> and a
-              passion for AI, I bridge the gap between complex hardware and
-              intelligent software.
+              With a background in <span class="text-white font-semibold">mechatronics</span> and a passion for AI, I bridge the gap between complex hardware and intelligent software.
             </p>
             <p data-i18n="about_p2">
-              I specialize in building serverless architectures and machine
-              learning models that solve real-world problems. My approach is
-              rooted in engineering precision and driven by creative
-              problem-solving.
+              I specialize in building serverless architectures and machine learning models that solve real-world problems. My approach is rooted in engineering precision and driven by creative problem-solving.
             </p>
           </div>
         </div>
-        <div
-          class="glass-card rounded-3xl p-8 relative overflow-hidden group ai-glow"
-        >
-          <div
-            class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
-          >
-            <span class="material-symbols-outlined text-8xl"
-              >precision_manufacturing</span
-            >
+        <div class="glass-card rounded-3xl p-8 relative overflow-hidden group ai-glow">
+          <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+            <span class="material-symbols-outlined text-8xl">precision_manufacturing</span>
           </div>
           <div class="relative z-10 space-y-6">
             <h3 class="text-xl font-bold flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary"
-                >psychology</span
-              >
+              <span class="material-symbols-outlined text-primary">psychology</span>
               <span data-i18n="philosophy_title">The Philosophy</span>
             </h3>
             <p class="italic text-slate-300" data-i18n="philosophy_quote">
-              "Software shouldn't just exist; it should evolve. I build systems
-              that are not only functional but resilient and future-proof."
+              "Software shouldn't just exist; it should evolve. I build systems that are not only functional but resilient and future-proof."
             </p>
             <div class="flex items-center gap-4 pt-4 border-t border-white/5">
               <div class="text-center flex-1">
                 <div class="text-2xl font-black text-white">5+</div>
-                <div
-                  class="text-xs text-slate-500 uppercase"
-                  data-i18n="stat_years"
-                >
-                  Years Exp
-                </div>
+                <div class="text-xs text-slate-500 uppercase" data-i18n="stat_years">Years Exp</div>
               </div>
               <div class="w-px h-8 bg-white/10"></div>
               <div class="text-center flex-1">
                 <div class="text-2xl font-black text-white">12+</div>
-                <div
-                  class="text-xs text-slate-500 uppercase"
-                  data-i18n="stat_projects"
-                >
-                  Projects
-                </div>
+                <div class="text-xs text-slate-500 uppercase" data-i18n="stat_projects">Projects</div>
               </div>
               <div class="w-px h-8 bg-white/10"></div>
               <div class="text-center flex-1">
                 <div class="text-2xl font-black text-white">100%</div>
-                <div
-                  class="text-xs text-slate-500 uppercase"
-                  data-i18n="stat_uptime"
-                >
-                  Uptime Goal
-                </div>
+                <div class="text-xs text-slate-500 uppercase" data-i18n="stat_uptime">Uptime Goal</div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <!-- Skills Section -->
       <section class="space-y-12">
         <div class="text-center space-y-4">
-          <h2 class="text-3xl font-bold" data-i18n="skills_title">
-            Technical Arsenal
-          </h2>
-          <p class="text-slate-400" data-i18n="skills_subtitle">
-            Tools and frameworks I use to bring ideas to life
-          </p>
+          <h2 class="text-3xl font-bold" data-i18n="skills_title">Technical Arsenal</h2>
+          <p class="text-slate-400" data-i18n="skills_subtitle">Tools and frameworks I use to bring ideas to life</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Backend -->
-          <div
-            class="glass-card p-6 rounded-2xl border-t-2 border-t-primary/40"
-          >
+          <div class="glass-card p-6 rounded-2xl border-t-2 border-t-primary/40">
             <div class="flex items-center gap-3 mb-6">
-              <div
-                class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
-              >
+              <div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
                 <span class="material-symbols-outlined">terminal</span>
               </div>
-              <h3 class="font-bold" data-i18n="skill_backend">
-                Backend &amp; Logic
-              </h3>
+              <h3 class="font-bold" data-i18n="skill_backend">Backend &amp; Logic</h3>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >Python • Java • Node.js • C++</span
-              >
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >FastAPI</span
-              >
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >Flask</span
-              >
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >Relational / NoSQL Databases</span
-              >
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">Python • Java • Node.js • C++</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">FastAPI</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">Flask</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">Relational / NoSQL Databases</span>
             </div>
           </div>
           <!-- AI/ML -->
-          <div
-            class="glass-card p-6 rounded-2xl border-t-2 border-t-blue-400/40"
-          >
+          <div class="glass-card p-6 rounded-2xl border-t-2 border-t-blue-400/40">
             <div class="flex items-center gap-3 mb-6">
               <div class="size-10 rounded-lg flex items-center justify-center">
                 <span class="material-symbols-outlined">neurology</span>
               </div>
-              <h3 class="font-bold" data-i18n="skill_ai">
-                AI &amp; Machine Learning
-              </h3>
+              <h3 class="font-bold" data-i18n="skill_ai">AI &amp; Machine Learning</h3>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >TensorFlow / PyTorch serving</span
-              >
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >OpenCV</span
-              >
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >LangChain</span
-              >
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >Scikit-learn</span
-              >
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">TensorFlow / PyTorch serving</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">OpenCV</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">LangChain</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">Scikit-learn</span>
             </div>
           </div>
           <!-- Infrastructure -->
-          <div
-            class="glass-card p-6 rounded-2xl border-t-2 border-t-indigo-400/40"
-          >
+          <div class="glass-card p-6 rounded-2xl border-t-2 border-t-indigo-400/40">
             <div class="flex items-center gap-3 mb-6">
-              <div
-                class="size-10 rounded-lg bg-indigo-400/10 flex items-center justify-center text-indigo-400"
-              >
+              <div class="size-10 rounded-lg bg-indigo-400/10 flex items-center justify-center text-indigo-400">
                 <span class="material-symbols-outlined">cloud</span>
               </div>
-              <h3 class="font-bold" data-i18n="skill_cloud">
-                Cloud &amp; DevOps
-              </h3>
+              <h3 class="font-bold" data-i18n="skill_cloud">Cloud &amp; DevOps</h3>
             </div>
             <div class="flex flex-wrap gap-2">
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >AWS Lambda</span
-              >
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >Docker</span
-              >
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >Terraform</span
-              >
-              <span
-                class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5"
-                >Git & GitHub</span
-              >
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">AWS Lambda</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">Docker</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">Terraform</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 text-sm font-medium border border-white/5">Git & GitHub</span>
             </div>
           </div>
         </div>
       </section>
+
       <!-- Project Section -->
       <section id="projects" class="space-y-12">
-        <div
-          class="flex flex-col md:flex-row md:items-end justify-between gap-4"
-        >
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 text-center md:text-left">
           <div class="space-y-2">
-            <h2 class="text-3xl font-bold" data-i18n="projects_title">
-              Featured Projects
-            </h2>
-            <p class="text-slate-400" data-i18n="projects_subtitle">
-              Recent work in AI and System Architecture
-            </p>
+            <h2 class="text-3xl font-bold" data-i18n="projects_title">Featured Projects</h2>
+            <p class="text-slate-400" data-i18n="projects_subtitle">Recent work in AI and System Architecture</p>
           </div>
-          <a
-            class="text-primary font-bold flex items-center gap-1 hover:underline"
-            href="https://github.com/Solrac12345"
-            data-i18n="projects_github"
-          >
+          <a class="text-primary font-bold flex items-center gap-1 hover:underline" href="https://github.com/Solrac12345" data-i18n="projects_github">
             View all on GitHub
             <span class="material-symbols-outlined text-sm">open_in_new</span>
           </a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Project 1 --->
-          <article
-            class="group glass-card rounded-3xl overflow-hidden hover:border-primary/30 transition-all"
-          >
+          <!-- Project 1 -->
+          <article class="group glass-card rounded-3xl overflow-hidden hover:border-primary/30 transition-all">
             <div class="aspect-video bg-slate-800 overflow-hidden">
-              <video
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                src="/static/videos/multi_agent.mp4"
-                controls
-                autoplay
-                muted
-                loop
-                playsinline
-                controlsList="nodownload"
-              ></video>
+              <video class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="/static/videos/multi_agent.mp4" controls autoplay muted loop playsinline controlsList="nodownload"></video>
             </div>
             <div class="p-8 space-y-4">
               <header class="flex items-start justify-between">
-
-                <h3 class="text-xl font-bold" data-i18n="proj1_title">
-                  Multi‑Agent Orchestration Platform
-                </h3>
-                
+                <h3 class="text-xl font-bold" data-i18n="proj1_title">Multi‑Agent Orchestration Platform</h3>
                 <div class="flex gap-2">
-                  <a
-                    class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white"
-                    href="https://github.com/Solrac12345/strata-rag-or"
-                  >
+                  <a class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white" href="https://github.com/Solrac12345/strata-rag-or">
                     <svg class="size-5 fill-current" viewBox="0 0 24 24">
                       <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path>
                     </svg>
                   </a>
                 </div>
               </header>
-
-              <p
-                class="text-slate-400 text-sm leading-relaxed"
-                data-i18n="proj1_desc"
-              >
-                Multi‑agent system that routes queries, retrieves relevant data, and generates grounded responses.
+              <p class="text-slate-400 text-sm leading-relaxed" data-i18n="proj1_desc">Multi‑agent system that routes queries, retrieves relevant data, and generates grounded responses.</p>
+              <ul class="text-slate-500 text-xs mt-3 space-y-1" data-i18n="proj1_features"></ul>
+              <p class="text-slate-500 text-xs leading-relaxed border-l-2 border-primary/40 pl-4" data-i18n="proj1_arch_note">
+                Architecture Note: This project is intentionally designed as a modular orchestration foundation rather than a single-purpose application. It serves as a reusable base to build different AI systems (RAG assistants, coding agents, data analysts) by swapping agents, tools, and retrieval strategies without changing the core architecture.
               </p>
-                <ul
-                  class="text-slate-500 text-xs mt-3 space-y-1"
-                  data-i18n="proj1_features"
-                ></ul>
-
-                <!-- NEW: Architecture Note -->
-               <p class="text-slate-500 text-xs leading-relaxed border-l-2 border-primary/40 pl-4"
-                  data-i18n="proj1_arch_note">
-                 Architecture Note: This project is intentionally designed as a modular orchestration foundation rather than a single-purpose application. It serves as a reusable base to build different AI systems (RAG assistants, coding agents, data analysts) by swapping agents, tools, and retrieval strategies without changing the core architecture.
-               </p>
-
-               <ul class="flex flex-wrap gap-2 pt-2">
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   FastAPI + Uvicorn + Pydantic
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   RAG + embeddings + vector retrieval
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Lambda + API Gateway + DynamoDB + S3
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Docker + Docker Compose + Terraform + GitHub Actions
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   pytest
-                 </li>
-               </ul>
+              <ul class="flex flex-wrap gap-2 pt-2">
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">FastAPI + Uvicorn + Pydantic</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">RAG + embeddings + vector retrieval</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Lambda + API Gateway + DynamoDB + S3</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Docker + Docker Compose + Terraform + GitHub Actions</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">pytest</li>
+              </ul>
             </div>
           </article>
           <!-- Project 2 -->
-          <article
-            class="group glass-card rounded-3xl overflow-hidden hover:border-primary/30 transition-all"
-          >
+          <article class="group glass-card rounded-3xl overflow-hidden hover:border-primary/30 transition-all">
             <div class="aspect-video bg-slate-800 overflow-hidden">
-              <video
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                src="/static/videos/ai_knowledge.mp4"
-                controls
-                playsinline
-                poster="/static/images/ai_knowledge_preview.png"
-                controlsList="nodownload"
-              ></video>
+              <video class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="/static/videos/ai_knowledge.mp4" controls playsinline poster="/static/images/ai_knowledge_preview.png" controlsList="nodownload"></video>
             </div>
-
             <div class="p-8 space-y-4">
               <header class="flex items-start justify-between">
-                <h3 class="text-xl font-bold" data-i18n="proj2_title">
-                  AI Knowledge Assistant (RAG) 
-                </h3>
-
+                <h3 class="text-xl font-bold" data-i18n="proj2_title">AI Knowledge Assistant (RAG)</h3>
                 <div class="flex gap-2">
-                  <a
-                    class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white"
-                    href="https://github.com/Solrac12345/knowledge_assistant_rag"
-                  >
+                  <a class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white" href="https://github.com/Solrac12345/knowledge_assistant_rag">
                     <svg class="size-5 fill-current" viewBox="0 0 24 24">
                       <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path>
                     </svg>
                   </a>
                 </div>
               </header>
-
-              <p
-                class="text-slate-400 text-sm leading-relaxed"
-                data-i18n="proj2_desc"
-              >
-                AI assistant using a full RAG pipeline to ingest, index, and query documents locally with full privacy.
-               </p>
-               
-                <ul
-                  class="text-slate-500 text-xs mt-3 space-y-1"
-                  data-i18n="proj2_features"
-                ></ul>
-
-               <!-- NEW: Architecture Note -->
-               <p class="text-slate-500 text-xs leading-relaxed border-l-2 border-primary/40 pl-4"
-                  data-i18n="proj2_arch_note">
-                 Architecture Note: The system uses a modular RAG pipeline with independent components for loading, chunking, embedding, retrieval, and generation. A local LLM (Qwen 2.5 via Ollama) provides contextual answers, while ChromaDB manages vector storage. The architecture is fully local, privacy‑focused, and easily extensible.
-               </p>
-
-               <ul class="flex flex-wrap gap-2 pt-2">
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   FastAPI
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   LangGraph + Multi-Agent
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   FastAPI + Async/Await
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Pydantic + MyPy + Ruff
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Docker (Multi-Stage) + Trivy
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   CI/CD + GitHub Actions
-                 </li>
-               </ul>
+              <p class="text-slate-400 text-sm leading-relaxed" data-i18n="proj2_desc">AI assistant using a full RAG pipeline to ingest, index, and query documents locally with full privacy.</p>
+              <ul class="text-slate-500 text-xs mt-3 space-y-1" data-i18n="proj2_features"></ul>
+              <p class="text-slate-500 text-xs leading-relaxed border-l-2 border-primary/40 pl-4" data-i18n="proj2_arch_note">
+                Architecture Note: The system uses a modular RAG pipeline with independent components for loading, chunking, embedding, retrieval, and generation. A local LLM (Qwen 2.5 via Ollama) provides contextual answers, while ChromaDB manages vector storage. The architecture is fully local, privacy‑focused, and easily extensible.
+              </p>
+              <ul class="flex flex-wrap gap-2 pt-2">
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">FastAPI</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">LangGraph + Multi-Agent</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">FastAPI + Async/Await</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Pydantic + MyPy + Ruff</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Docker (Multi-Stage) + Trivy</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">CI/CD + GitHub Actions</li>
+              </ul>
             </div>
           </article>
           <!-- Project 3 -->
-          <article
-            class="group glass-card rounded-3xl overflow-hidden hover:border-primary/30 transition-all"
-          >
+          <article class="group glass-card rounded-3xl overflow-hidden hover:border-primary/30 transition-all">
             <div class="aspect-video bg-slate-800 overflow-hidden">
-              <video
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                src="/static/videos/ai_data.mp4"
-                controls
-                playsinline
-                controlsList="nodownload"
-                poster="/static/images/ai_data_preview.png"
-              ></video>
+              <video class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="/static/videos/ai_data.mp4" controls playsinline controlsList="nodownload" poster="/static/images/ai_data_preview.png"></video>
             </div>
-
             <div class="p-8 space-y-4">
               <header class="flex items-start justify-between">
-                <h3 class="text-xl font-bold" data-i18n="proj3_title">
-                  AI Data Analyst 
-                </h3>
-
+                <h3 class="text-xl font-bold" data-i18n="proj3_title">AI Data Analyst</h3>
                 <div class="flex gap-2">
-                  <a
-                    class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white"
-                    href="https://github.com/Solrac12345/ai_data_analyst"
-                  >
+                  <a class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white" href="https://github.com/Solrac12345/ai_data_analyst">
                     <svg class="size-5 fill-current" viewBox="0 0 24 24">
                       <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path>
                     </svg>
                   </a>
                 </div>
               </header>
-
-              <p
-                class="text-slate-400 text-sm leading-relaxed"
-                data-i18n="proj3_desc"
-              ></p>
-                <ul
-                    class="text-slate-500 text-xs mt-3 space-y-1"
-                    data-i18n="proj3_features"
-                  ></ul>
-               <!-- NEW: Architecture Note -->
-               <p class="text-slate-500 text-xs leading-relaxed border-l-2 border-primary/40 pl-4"
-                  data-i18n="proj3_arch_note">
-                 Architecture note: The system enforces strict separation of concerns via independent agents and a typed state flow, enabling module scaling or replacement without impacting the core. Its decoupled design and dual exposure (CLI/API) demonstrate how modularity, automated testing, and infrastructure‑as‑code ensure maintainability, continuous integration, and reliable deployment in production environments.
-               </p>
-
-               <ul class="flex flex-wrap gap-2 pt-2">
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Generative AI 
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Agentic Workflows
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Data Analytics
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Data Pipeline Automation
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Pandas + NumPy
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Plotly
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Automated Reporting
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   AI Agents
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   CI/CD + GitHub Actions
-                 </li>
-               </ul>
+              <p class="text-slate-400 text-sm leading-relaxed" data-i18n="proj3_desc"></p>
+              <ul class="text-slate-500 text-xs mt-3 space-y-1" data-i18n="proj3_features"></ul>
+              <p class="text-slate-500 text-xs leading-relaxed border-l-2 border-primary/40 pl-4" data-i18n="proj3_arch_note">
+                Architecture note: The system enforces strict separation of concerns via independent agents and a typed state flow, enabling module scaling or replacement without impacting the core. Its decoupled design and dual exposure (CLI/API) demonstrate how modularity, automated testing, and infrastructure‑as‑code ensure maintainability, continuous integration, and reliable deployment in production environments.
+              </p>
+              <ul class="flex flex-wrap gap-2 pt-2">
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Generative AI</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Agentic Workflows</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Data Analytics</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Data Pipeline Automation</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Pandas + NumPy</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Plotly</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Automated Reporting</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">AI Agents</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">CI/CD + GitHub Actions</li>
+              </ul>
             </div>
           </article>
           <!-- Project 4 -->
-          <article
-            class="group glass-card rounded-3xl overflow-hidden hover:border-primary/30 transition-all"
-          >
+          <article class="group glass-card rounded-3xl overflow-hidden hover:border-primary/30 transition-all">
             <div class="aspect-video bg-slate-800 overflow-hidden">
-              <video
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              src="/static/videos/ai_coding.mp4"
-              controls
-              controlsList="nodownload"
-              playsinline
-              poster="/static/images/ai_coding_preview.png"
-            ></video>
+              <video class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="/static/videos/ai_coding.mp4" controls controlsList="nodownload" playsinline poster="/static/images/ai_coding_preview.png"></video>
             </div>
-
             <div class="p-8 space-y-4">
               <header class="flex items-start justify-between">
-                <h3 class="text-xl font-bold" data-i18n="proj4_title">
-                  AI Coding Assistant 
-                </h3>
-
+                <h3 class="text-xl font-bold" data-i18n="proj4_title">AI Coding Assistant</h3>
                 <div class="flex gap-2">
-                  <a
-                    class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white"
-                    href="https://github.com/Solrac12345/ai-coding-assistant"
-                  >
+                  <a class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white" href="https://github.com/Solrac12345/ai-coding-assistant">
                     <svg class="size-5 fill-current" viewBox="0 0 24 24">
                       <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path>
                     </svg>
                   </a>
                 </div>
               </header>
-
-              <p
-                class="text-slate-400 text-sm leading-relaxed"
-                data-i18n="proj4_desc"
-              ></p>
-                <ul
-                    class="text-slate-500 text-xs mt-3 space-y-1"
-                    data-i18n="proj4_features"
-                  ></ul>
-               <!-- NEW: Architecture Note -->
-               <p class="text-slate-500 text-xs leading-relaxed border-l-2 border-primary/40 pl-4"
-                  data-i18n="proj4_arch_note">
-                 Architecture note: Modular design with specialized agents coordinated by a Supervisor. A shared state object and clear separation of responsibilities make the system extensible, maintainable, and ready for future integration with local LLMs.
-               </p>
-
-               <ul class="flex flex-wrap gap-2 pt-2">
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   LangGraph + Multi-Agent
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   TestAutomation
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Pytest
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   CodeQuality
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   Ruff
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   BlackFormatter
-                 </li>
-                 <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">
-                   CI/CD + GitHub Actions
-                 </li>
-               </ul>
+              <p class="text-slate-400 text-sm leading-relaxed" data-i18n="proj4_desc"></p>
+              <ul class="text-slate-500 text-xs mt-3 space-y-1" data-i18n="proj4_features"></ul>
+              <p class="text-slate-500 text-xs leading-relaxed border-l-2 border-primary/40 pl-4" data-i18n="proj4_arch_note">
+                Architecture note: Modular design with specialized agents coordinated by a Supervisor. A shared state object and clear separation of responsibilities make the system extensible, maintainable, and ready for future integration with local LLMs.
+              </p>
+              <ul class="flex flex-wrap gap-2 pt-2">
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">LangGraph + Multi-Agent</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">TestAutomation</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Pytest</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">CodeQuality</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">Ruff</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">BlackFormatter</li>
+                <li class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold border border-primary/20 uppercase">CI/CD + GitHub Actions</li>
+              </ul>
             </div>
           </article>
+        </div>
       </section>
+
       <!-- Personality Spotlight -->
       <section class="relative">
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-primary/20 to-indigo-500/20 rounded-[40px] blur-3xl opacity-30"
-        ></div>
-        <div
-          class="glass-card rounded-[40px] p-8 md:p-16 relative overflow-hidden flex flex-col md:flex-row items-center gap-12 text-center md:text-left"
-        >
-          <div
-            class="size-48 md:size-64 rounded-3xl rotate-6 overflow-hidden border-8 border-white/5 bg-slate-800 shadow-2xl flex-shrink-0"
-          >
-            <img
-              class="w-full h-full object-cover"
-              alt="Carlos working in a casual studio environment"
-              src="/static/images/photo1.png"
-            />
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-indigo-500/20 rounded-[40px] blur-3xl opacity-30"></div>
+        <div class="glass-card rounded-[40px] p-8 md:p-16 relative overflow-hidden flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
+          <div class="size-48 md:size-64 rounded-3xl rotate-6 overflow-hidden border-8 border-white/5 bg-slate-800 shadow-2xl flex-shrink-0">
+            <img class="w-full h-full object-cover" alt="Carlos working in a casual studio environment" src="/static/images/photo1.png" />
           </div>
           <div class="space-y-6">
-            <h2 class="text-3xl font-bold" data-i18n="personality_title">
-              The Developer Behind the Code
-            </h2>
-            <p
-              class="text-lg text-slate-300 leading-relaxed"
-              data-i18n="personality_desc"
-            >
-              I believe that great engineering starts with a great environment.
-              I bring a
-              <span class="text-primary font-bold"
-                >relaxed, motivated, and welcoming energy</span
-              >
-              to every team I join. Whether we're debugging a tricky race
-              condition or architecting a new ML pipeline, I'm the one ensuring
-              we keep moving forward with a smile and a solution.
+            <h2 class="text-3xl font-bold" data-i18n="personality_title">The Developer Behind the Code</h2>
+            <p class="text-lg text-slate-300 leading-relaxed" data-i18n="personality_desc">
+              I believe that great engineering starts with a great environment. I bring a <span class="text-primary font-bold">relaxed, motivated, and welcoming energy</span> to every team I join. Whether we're debugging a tricky race condition or architecting a new ML pipeline, I'm the one ensuring we keep moving forward with a smile and a solution.
             </p>
             <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-              <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm"
-              >
-                <span class="material-symbols-outlined text-green-400 text-sm"
-                  >coffee</span
-                >
+              <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm">
+                <span class="material-symbols-outlined text-green-400 text-sm">coffee</span>
                 <span data-i18n="trait_coffee">Chess Enthusiast</span>
               </div>
-              <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm"
-              >
-                <span class="material-symbols-outlined text-blue-400 text-sm"
-                  >group</span
-                >
+              <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm">
+                <span class="material-symbols-outlined text-blue-400 text-sm">group</span>
                 <span data-i18n="trait_collab">Collaborative Spirit</span>
               </div>
-              <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm"
-              >
-                <span class="material-symbols-outlined text-purple-400 text-sm"
-                  >rocket_launch</span
-                >
+              <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm">
+                <span class="material-symbols-outlined text-purple-400 text-sm">rocket_launch</span>
                 <span data-i18n="trait_solution">Solution Oriented</span>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <!-- Contact CTA -->
       <section class="pb-12" id="contact">
-        <div
-          class="max-w-2xl mx-auto glass-card rounded-3xl p-8 md:p-12 text-center space-y-8 border-2 border-primary/20"
-        >
-          <h2 class="text-3xl font-bold" data-i18n="contact_title">
-            Ready to build something amazing?
-          </h2>
-          <p class="text-slate-400" data-i18n="contact_desc">
-            Currently open to new opportunities and interesting AI projects.
-            Let's talk about how I can help your team.
-          </p>
+        <div class="max-w-2xl mx-auto glass-card rounded-3xl p-8 md:p-12 text-center space-y-8 border-2 border-primary/20">
+          <h2 class="text-3xl font-bold" data-i18n="contact_title">Ready to build something amazing?</h2>
+          <p class="text-slate-400" data-i18n="contact_desc">Currently open to new opportunities and interesting AI projects. Let's talk about how I can help your team.</p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-2xl transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3"
-              href="mailto:carldavid947@outlook.com"
-              data-i18n="contact_email"
-            >
+            <a class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-2xl transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3" href="mailto:carldavid947@outlook.com" data-i18n="contact_email">
               <span class="material-symbols-outlined">send</span> Send an Email
             </a>
             <div class="flex gap-4 justify-center">
-              <a
-                class="size-14 glass-card rounded-2xl flex items-center justify-center hover:bg-white/10 transition-colors"
-                href="https://www.linkedin.com/in/carlos-david-tamayo-montañez-03456a204"
-              >
+              <a class="size-14 glass-card rounded-2xl flex items-center justify-center hover:bg-white/10 transition-colors" href="https://www.linkedin.com/in/carlos-david-tamayo-montañez-03456a204">
                 <svg class="size-6 fill-current" viewbox="0 0 24 24">
-                  <path
-                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                  ></path>
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
                 </svg>
               </a>
-              <a
-                class="size-14 glass-card rounded-2xl flex items-center justify-center hover:bg-white/10 transition-colors"
-                href="https://github.com/Solrac12345"
-              >
+              <a class="size-14 glass-card rounded-2xl flex items-center justify-center hover:bg-white/10 transition-colors" href="https://github.com/Solrac12345">
                 <svg class="size-6 fill-current" viewbox="0 0 24 24">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                  ></path>
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path>
                 </svg>
               </a>
             </div>
@@ -783,75 +409,27 @@
         </div>
       </section>
     </main>
-    <!-- Bottom Navigation (Mobile Only) -->
-    <nav
-      class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background-dark/80 backdrop-blur-xl border-t border-white/5 px-6 pb-6 pt-3"
-    >
-      <div class="flex items-center justify-between">
-        <a class="flex flex-col items-center gap-1 text-primary" href="#">
-          <span class="material-symbols-outlined">home</span>
-          <span
-            class="text-[10px] font-bold uppercase tracking-widest"
-            data-i18n="nav_home"
-            >Home</span
-          >
-        </a>
-        <a class="flex flex-col items-center gap-1 text-slate-500" href="#">
-          <span class="material-symbols-outlined">terminal</span>
-          <span
-            class="text-[10px] font-bold uppercase tracking-widest"
-            data-i18n="nav_work"
-            >Work</span
-          >
-        </a>
-        <a class="flex flex-col items-center gap-1 text-slate-500" href="#">
-          <span class="material-symbols-outlined">person</span>
-          <span
-            class="text-[10px] font-bold uppercase tracking-widest"
-            data-i18n="nav_about"
-            >About</span
-          >
-        </a>
-        <a class="flex flex-col items-center gap-1 text-slate-500" href="#">
-          <span class="material-symbols-outlined">mail</span>
-          <span
-            class="text-[10px] font-bold uppercase tracking-widest"
-            data-i18n="nav_contact"
-            >Contact</span
-          >
-        </a>
-      </div>
-    </nav>
-    <footer
-      class="bg-background-dark border-t border-white/5 py-12 px-4 text-center"
-    >
+
+    <footer class="bg-background-dark border-t border-white/5 py-12 px-4 text-center">
       <div class="max-w-5xl mx-auto space-y-4">
         <div class="font-bold text-lg">Carlos David Tamayo Montañez</div>
-        <p class="text-slate-500 text-sm" data-i18n="footer">
-          &copy; 2026 AI Developer Portfolio. Built with passion &amp; Python.
-        </p>
+        <p class="text-slate-500 text-sm" data-i18n="footer">&copy; 2026 AI Developer Portfolio. Built with passion &amp; Python.</p>
       </div>
     </footer>
 
     <script>
+      // i18n translations (same as before - omitted for brevity)
       const i18n = {
         en: {
-          hero_title:
-            'Turning Ideas Into Scalable, <span class="text-primary">Real\u2011World Systems</span>',
-          hero_projects:
-            'View Projects <span class="material-symbols-outlined text-sm">arrow_downward</span>',
-          hero_resume:
-            'Resume <span class="material-symbols-outlined text-sm">description</span>',
-            
+          hero_title: 'Turning Ideas Into Scalable, <span class="text-primary">Real\u2011World Systems</span>',
+          hero_projects: 'View Projects <span class="material-symbols-outlined text-sm">arrow_downward</span>',
+          hero_resume: 'Resume <span class="material-symbols-outlined text-sm">description</span>',
           about_badge: "About Me",
           about_title: "Bridging Mechatronics and AI",
-          about_p1:
-            'With a background in <span class="text-white font-semibold">mechatronics</span> and a passion for AI, I bridge the gap between complex hardware and intelligent software.',
-          about_p2:
-            "I specialize in building serverless architectures and machine learning models that solve real-world problems. My approach is rooted in engineering precision and driven by creative problem-solving.",
+          about_p1: 'With a background in <span class="text-white font-semibold">mechatronics</span> and a passion for AI, I bridge the gap between complex hardware and intelligent software.',
+          about_p2: "I specialize in building serverless architectures and machine learning models that solve real-world problems. My approach is rooted in engineering precision and driven by creative problem-solving.",
           philosophy_title: "The Philosophy",
-          philosophy_quote:
-            '"Software shouldn\'t just exist; it should evolve. I build systems that are not only functional but resilient and future-proof."',
+          philosophy_quote: '"Software shouldn\'t just exist; it should evolve. I build systems that are not only functional but resilient and future-proof."',
           stat_years: "Years Exp",
           stat_projects: "Projects",
           stat_uptime: "Uptime Goal",
@@ -862,262 +440,130 @@
           skill_cloud: "Cloud & DevOps",
           projects_title: "Featured Projects",
           projects_subtitle: "Recent work in AI and System Architecture",
-          projects_github:
-            'View all on GitHub <span class="material-symbols-outlined text-sm">open_in_new</span>',
+          projects_github: 'View all on GitHub <span class="material-symbols-outlined text-sm">open_in_new</span>',
           proj1_title: "Multi‑Agent Orchestration Platform",
-          proj1_desc:
-            "Multi‑agent system that routes queries, retrieves relevant data, and generates grounded responses.",
-          proj1_features: `
-            <li>• Intelligent query routing</li>
-            <li>• RAG-based retrieval pipeline</li>
-            <li>• Structured response generation</li>
-          `,
-          proj1_arch_note:
-            "Architecture Note: This project is intentionally designed as a modular orchestration foundation rather than a single‑purpose application. It serves as a reusable base to build different AI systems (RAG assistants, coding agents, data analysts) by swapping agents, tools, and retrieval strategies without changing the core architecture.",
-                    
+          proj1_desc: "Multi‑agent system that routes queries, retrieves relevant data, and generates grounded responses.",
+          proj1_features: `<li>• Intelligent query routing</li><li>• RAG-based retrieval pipeline</li><li>• Structured response generation</li>`,
+          proj1_arch_note: "Architecture Note: This project is intentionally designed as a modular orchestration foundation rather than a single‑purpose application. It serves as a reusable base to build different AI systems (RAG assistants, coding agents, data analysts) by swapping agents, tools, and retrieval strategies without changing the core architecture.",
           proj2_title: "AI Knowledge Assistant (RAG)",
-          proj2_desc:
-            "AI assistant using a full RAG pipeline to ingest, index, and query documents locally with full privacy.",
-          
-          proj2_features: `
-            <li>• Document ingestion & indexing</li>
-            <li>• Semantic search (RAG)</li>
-            <li>• Local LLM (privacy-first)</li>
-          `,
-          proj2_arch_note:
-            "Architecture Note: The system uses a modular RAG pipeline with independent components for loading, chunking, embedding, retrieval, and generation. A local LLM (Qwen 2.5 via Ollama) provides contextual answers, while ChromaDB manages vector storage. The architecture is fully local, privacy‑focused, and easily extensible.",
-          
+          proj2_desc: "AI assistant using a full RAG pipeline to ingest, index, and query documents locally with full privacy.",
+          proj2_features: `<li>• Document ingestion & indexing</li><li>• Semantic search (RAG)</li><li>• Local LLM (privacy-first)</li>`,
+          proj2_arch_note: "Architecture Note: The system uses a modular RAG pipeline with independent components for loading, chunking, embedding, retrieval, and generation. A local LLM (Qwen 2.5 via Ollama) provides contextual answers, while ChromaDB manages vector storage. The architecture is fully local, privacy‑focused, and easily extensible.",
           proj3_title: "AI Data Analyst",
-          
-          proj3_desc:
-            "Multi‑agent data analysis pipeline that generates insights, visualizations, and interactive reports from raw data.",
-          proj3_features: `
-            <li>• Multi-agent workflow orchestration</li>
-            <li>• Automated insights & visualizations</li>
-            <li>• Interactive HTML report generation</li>
-          `,
-          proj3_arch_note:
-              "Architecture note: The system enforces strict separation of concerns via independent agents and a typed state flow, enabling module scaling or replacement without impacting the core. Its decoupled design and dual exposure (CLI/API) demonstrate how modularity, automated testing, and infrastructure‑as‑code ensure maintainability, continuous integration, and reliable deployment in production environments.",
-          
+          proj3_desc: "Multi‑agent data analysis pipeline that generates insights, visualizations, and interactive reports from raw data.",
+          proj3_features: `<li>• Multi-agent workflow orchestration</li><li>• Automated insights & visualizations</li><li>• Interactive HTML report generation</li>`,
+          proj3_arch_note: "Architecture note: The system enforces strict separation of concerns via independent agents and a typed state flow, enabling module scaling or replacement without impacting the core. Its decoupled design and dual exposure (CLI/API) demonstrate how modularity, automated testing, and infrastructure‑as‑code ensure maintainability, continuous integration, and reliable deployment in production environments.",
           proj4_title: "AI Coding Assistant",
-          proj4_desc:
-            "Multi‑agent coding assistant that analyzes, optimizes, and documents code automatically.",
-          proj4_features: `
-            <li>• AST-based code analysis</li>
-            <li>• Automated optimization & refactoring</li>
-            <li>• Documentation generation</li>
-          `,
-          proj4_arch_note:
-            "Architecture note: Modular design with specialized agents coordinated by a Supervisor. A shared state object and clear separation of responsibilities make the system extensible, maintainable, and ready for future integration with local LLMs.",
-          
+          proj4_desc: "Multi‑agent coding assistant that analyzes, optimizes, and documents code automatically.",
+          proj4_features: `<li>• AST-based code analysis</li><li>• Automated optimization & refactoring</li><li>• Documentation generation</li>`,
+          proj4_arch_note: "Architecture note: Modular design with specialized agents coordinated by a Supervisor. A shared state object and clear separation of responsibilities make the system extensible, maintainable, and ready for future integration with local LLMs.",
           personality_title: "The Developer Behind the Code",
-          personality_desc:
-            "I believe that great engineering starts with a great environment. I bring a <span class=\"text-primary font-bold\">relaxed, motivated, and welcoming energy</span> to every team I join. Whether we're debugging a tricky race condition or architecting a new ML pipeline, I'm the one ensuring we keep moving forward with a smile and a solution.",
+          personality_desc: "I believe that great engineering starts with a great environment. I bring a <span class=\"text-primary font-bold\">relaxed, motivated, and welcoming energy</span> to every team I join. Whether we're debugging a tricky race condition or architecting a new ML pipeline, I'm the one ensuring we keep moving forward with a smile and a solution.",
           trait_coffee: "Chess enthusiast",
           trait_collab: "Collaborative Spirit",
           trait_solution: "Solution Oriented",
           contact_title: "Ready to build something amazing?",
-          contact_desc:
-            "Currently open to new opportunities and interesting AI projects. Let's talk about how I can help your team.",
-          contact_email:
-            '<span class="material-symbols-outlined">send</span> Send an Email',
-          nav_home: "Home",
-          nav_work: "Work",
-          nav_about: "About",
-          nav_contact: "Contact",
-          footer:
-            "&copy; 2026 AI Developer Portfolio. Built with passion & Python.",
+          contact_desc: "Currently open to new opportunities and interesting AI projects. Let's talk about how I can help your team.",
+          contact_email: '<span class="material-symbols-outlined">send</span> Send an Email',
+          footer: "&copy; 2026 AI Developer Portfolio. Built with passion & Python.",
           resume_tooltip: "The resume download respects current language",
         },
         fr: {
-          hero_title:
-            'Transformer les id\u00e9es en syst\u00e8mes <span class="text-primary">\u00e9volutifs et concrets</span>',
-          hero_projects:
-            'Voir les projets <span class="material-symbols-outlined text-sm">arrow_downward</span>',
-          hero_resume:
-            'CV <span class="material-symbols-outlined text-sm">description</span>',
+          hero_title: 'Transformer les id\u00e9es en syst\u00e8mes <span class="text-primary">\u00e9volutifs et concrets</span>',
+          hero_projects: 'Voir les projets <span class="material-symbols-outlined text-sm">arrow_downward</span>',
+          hero_resume: 'CV <span class="material-symbols-outlined text-sm">description</span>',
           about_badge: "\u00c0 propos",
           about_title: "Entre m\u00e9catronique et IA",
-          about_p1:
-            'Avec une formation en <span class="text-white font-semibold">m\u00e9catronique</span> et une passion pour l\'IA, je fais le lien entre le mat\u00e9riel complexe et le logiciel intelligent.',
-          about_p2:
-            "Je me sp\u00e9cialise dans la cr\u00e9ation d'architectures serverless et de mod\u00e8les de machine learning qui r\u00e9solvent des probl\u00e8mes concrets. Mon approche est ancr\u00e9e dans la pr\u00e9cision de l'ing\u00e9nierie et guid\u00e9e par la r\u00e9solution cr\u00e9ative de probl\u00e8mes.",
+          about_p1: 'Avec une formation en <span class="text-white font-semibold">m\u00e9catronique</span> et une passion pour l\'IA, je fais le lien entre le mat\u00e9riel complexe et le logiciel intelligent.',
+          about_p2: "Je me sp\u00e9cialise dans la cr\u00e9ation d'architectures serverless et de mod\u00e8les de machine learning qui r\u00e9solvent des probl\u00e8mes concrets. Mon approche est ancr\u00e9e dans la pr\u00e9cision de l'ing\u00e9nierie et guid\u00e9e par la r\u00e9solution cr\u00e9ative de probl\u00e8mes.",
           philosophy_title: "La Philosophie",
-          philosophy_quote:
-            '"Un logiciel ne devrait pas simplement exister ; il devrait \u00e9voluer. Je construis des syst\u00e8mes non seulement fonctionnels mais r\u00e9silients et p\u00e9rennes."',
+          philosophy_quote: '"Un logiciel ne devrait pas simplement exister ; il devrait \u00e9voluer. Je construis des syst\u00e8mes non seulement fonctionnels mais r\u00e9silients et p\u00e9rennes."',
           stat_years: "Ans d'exp.",
           stat_projects: "Projets",
           stat_uptime: "Objectif uptime",
           skills_title: "Arsenal Technique",
-          skills_subtitle:
-            "Outils et frameworks que j'utilise pour donner vie aux id\u00e9es",
+          skills_subtitle: "Outils et frameworks que j'utilise pour donner vie aux id\u00e9es",
           skill_backend: "Backend & Logique",
           skill_ai: "IA & Machine Learning",
           skill_cloud: "Cloud & DevOps",
           projects_title: "Projets Phares",
-          projects_subtitle:
-            "Travaux r\u00e9cents en IA et architecture syst\u00e8me",
-          projects_github:
-            'Tout voir sur GitHub <span class="material-symbols-outlined text-sm">open_in_new</span>',
+          projects_subtitle: "Travaux r\u00e9cents en IA et architecture syst\u00e8me",
+          projects_github: 'Tout voir sur GitHub <span class="material-symbols-outlined text-sm">open_in_new</span>',
           proj1_title: "Plateforme d'orchestration multi-agents",
-          proj1_desc:
-            "Système multi‑agents qui route les requêtes, récupère les données pertinentes et génère des réponses fiables.",
-          proj1_features: `
-            <li>• Routage intelligent des requêtes</li>
-            <li>• Pipeline de récupération basé sur RAG</li>
-            <li>• Génération de réponses structurées</li>
-          `,
-          proj1_arch_note:
-            "Note d'architecture : Ce projet est intentionnellement conçu comme une fondation d'orchestration modulaire plutôt qu'une application monolithique. Il sert de base réutilisable pour construire différents systèmes IA (assistants RAG, agents de codage, analystes de données) en échangeant les agents, les outils et les stratégies de récupération sans modifier l'architecture centrale.",
-          
+          proj1_desc: "Système multi‑agents qui route les requêtes, récupère les données pertinentes et génère des réponses fiables.",
+          proj1_features: `<li>• Routage intelligent des requêtes</li><li>• Pipeline de récupération basé sur RAG</li><li>• Génération de réponses structurées</li>`,
+          proj1_arch_note: "Note d'architecture : Ce projet est intentionnellement conçu comme une fondation d'orchestration modulaire plutôt qu'une application monolithique. Il sert de base réutilisable pour construire différents systèmes IA (assistants RAG, agents de codage, analystes de données) en échangeant les agents, les outils et les stratégies de récupération sans modifier l'architecture centrale.",
           proj2_title: "Assistant de Connaissances IA (RAG)",
-          proj2_desc:
-            "Assistant IA utilisant un pipeline RAG complet pour ingérer, indexer et interroger des documents localement avec une confidentialité totale.",
-          proj2_features: `
-            <li>• Ingestion et indexation de documents</li>
-            <li>• Recherche sémantique (RAG)</li>
-            <li>• LLM local (confidentialité totale)</li>
-          `,
-          proj2_arch_note:
-            "Note d’architecture : Le système utilise un pipeline RAG modulaire avec des composants indépendants pour le chargement, le découpage, les embeddings, la récupération et la génération. Un LLM local (Qwen 2.5 via Ollama) fournit des réponses contextuelles, tandis que ChromaDB gère le stockage vectoriel. L’architecture est entièrement locale, axée sur la confidentialité et facilement extensible.",
-          
+          proj2_desc: "Assistant IA utilisant un pipeline RAG complet pour ingérer, indexer et interroger des documents localement avec une confidentialité totale.",
+          proj2_features: `<li>• Ingestion et indexation de documents</li><li>• Recherche sémantique (RAG)</li><li>• LLM local (confidentialité totale)</li>`,
+          proj2_arch_note: "Note d'architecture : Le système utilise un pipeline RAG modulaire avec des composants indépendants pour le chargement, le découpage, les embeddings, la récupération et la génération. Un LLM local (Qwen 2.5 via Ollama) fournit des réponses contextuelles, tandis que ChromaDB gère le stockage vectoriel. L'architecture est entièrement locale, axée sur la confidentialité et facilement extensible.",
           proj3_title: "Analyste de Données IA",
-          proj3_desc:
-            "Pipeline d’analyse de données multi‑agents générant des insights, visualisations et rapports interactifs à partir de données brutes.",
-          proj3_features: `
-            <li>• Orchestration de workflow multi‑agents</li>
-            <li>• Insights et visualisations automatisés</li>
-            <li>• Génération de rapports HTML interactifs</li>
-          `,
-          proj3_arch_note:
-              "Note d'architecture : Le système applique une séparation stricte des responsabilités via des agents indépendants et un flux d'état typé, permettant de scaler ou remplacer des modules sans impacter le cœur. Sa conception découplée et son exposition duale (CLI/API) illustrent comment la modularité, les tests automatisés et l'infrastructure as code garantissent maintenabilité, intégration continue et déploiement fiable en environnement de production.",
-                    
+          proj3_desc: "Pipeline d'analyse de données multi‑agents générant des insights, visualisations et rapports interactifs à partir de données brutes.",
+          proj3_features: `<li>• Orchestration de workflow multi‑agents</li><li>• Insights et visualisations automatisés</li><li>• Génération de rapports HTML interactifs</li>`,
+          proj3_arch_note: "Note d'architecture : Le système applique une séparation stricte des responsabilités via des agents indépendants et un flux d'état typé, permettant de scaler ou remplacer des modules sans impacter le cœur. Sa conception découplée et son exposition duale (CLI/API) illustrent comment la modularité, les tests automatisés et l'infrastructure as code garantissent maintenabilité, intégration continue et déploiement fiable en environnement de production.",
           proj4_title: "Assistant de Programmation IA",
-          proj4_desc:
-            "Assistant de programmation multi‑agents capable d’analyser, d’optimiser et de documenter automatiquement le code.",
-          proj4_features: `
-            <li>• Analyse de code basée sur AST</li>
-            <li>• Optimisation et refactorisation automatiques</li>
-            <li>• Génération de documentation</li>
-          `,
-          proj4_arch_note:
-            "Note d’architecture : Conception modulaire avec des agents spécialisés coordonnés par un Superviseur. L’utilisation d’un état partagé et d’une séparation claire des responsabilités garantit une solution extensible, maintenable et prête pour une intégration future avec des modèles LLM locaux.",
-          
+          proj4_desc: "Assistant de programmation multi‑agents capable d'analyser, d'optimiser et de documenter automatiquement le code.",
+          proj4_features: `<li>• Analyse de code basée sur AST</li><li>• Optimisation et refactorisation automatiques</li><li>• Génération de documentation</li>`,
+          proj4_arch_note: "Note d'architecture : Conception modulaire avec des agents spécialisés coordonnés par un Superviseur. L'utilisation d'un état partagé et d'une séparation claire des responsabilités garantit une solution extensible, maintenable et prête pour une intégration future avec des modèles LLM locaux.",
           personality_title: "Le développeur derrière le code",
-          personality_desc:
-            "Je crois qu'un excellent travail d'ing\u00e9nierie commence par un excellent environnement. J'apporte une \u00e9nergie <span class=\"text-primary font-bold\">d\u00e9tendue, motiv\u00e9e et accueillante</span> \u00e0 chaque \u00e9quipe que je rejoins. Que nous d\u00e9boguions une condition de course d\u00e9licate ou concevions un nouveau pipeline ML, je suis celui qui fait avancer les choses avec le sourire et une solution.",
+          personality_desc: "Je crois qu'un excellent travail d'ing\u00e9nierie commence par un excellent environnement. J'apporte une \u00e9nergie <span class=\"text-primary font-bold\">d\u00e9tendue, motiv\u00e9e et accueillante</span> \u00e0 chaque \u00e9quipe que je rejoins. Que nous d\u00e9boguions une condition de course d\u00e9licate ou concevions un nouveau pipeline ML, je suis celui qui fait avancer les choses avec le sourire et une solution.",
           trait_coffee: "Admirateur d'échecs",
           trait_collab: "Esprit collaboratif",
           trait_solution: "Orient\u00e9 solutions",
-          contact_title:
-            "Pr\u00eat \u00e0 construire quelque chose d'incroyable ?",
-          contact_desc:
-            "Actuellement ouvert \u00e0 de nouvelles opportunit\u00e9s et projets IA int\u00e9ressants. Parlons de la fa\u00e7on dont je peux aider votre \u00e9quipe.",
-          contact_email:
-            '<span class="material-symbols-outlined">send</span> Envoyer un email',
-          nav_home: "Accueil",
-          nav_work: "Travaux",
-          nav_about: "\u00c0 propos",
-          nav_contact: "Contact",
-          footer:
-            "&copy; 2026 Portfolio D\u00e9veloppeur IA. Construit avec passion & Python.",
-          resume_tooltip: "Le téléchargement du CV respecte la langue actuelle ",
+          contact_title: "Pr\u00eat \u00e0 construire quelque chose d'incroyable ?",
+          contact_desc: "Actuellement ouvert \u00e0 de nouvelles opportunit\u00e9s et projets IA int\u00e9ressants. Parlons de la fa\u00e7on dont je peux aider votre \u00e9quipe.",
+          contact_email: '<span class="material-symbols-outlined">send</span> Envoyer un email',
+          footer: "&copy; 2026 Portfolio D\u00e9veloppeur IA. Construit avec passion & Python.",
+          resume_tooltip: "Le téléchargement du CV respecte la langue actuelle",
         },
         es: {
-          hero_title:
-            'Transformando ideas en sistemas <span class="text-primary">escalables y reales</span>',
-          hero_projects:
-            'Ver proyectos <span class="material-symbols-outlined text-sm">arrow_downward</span>',
-          hero_resume:
-            'CV <span class="material-symbols-outlined text-sm">description</span>',
+          hero_title: 'Transformando ideas en sistemas <span class="text-primary">escalables y reales</span>',
+          hero_projects: 'Ver proyectos <span class="material-symbols-outlined text-sm">arrow_downward</span>',
+          hero_resume: 'CV <span class="material-symbols-outlined text-sm">description</span>',
           about_badge: "Sobre m\u00ed",
           about_title: "Entre mecatr\u00f3nica e IA",
-          about_p1:
-            'Con formaci\u00f3n en <span class="text-white font-semibold">mecatr\u00f3nica</span> y pasi\u00f3n por la IA, conecto el hardware complejo con el software inteligente.',
-          about_p2:
-            "Me especializo en construir arquitecturas serverless y modelos de machine learning que resuelven problemas reales. Mi enfoque se basa en la precisi\u00f3n de la ingenier\u00eda y la resoluci\u00f3n creativa de problemas.",
+          about_p1: 'Con formaci\u00f3n en <span class="text-white font-semibold">mecatr\u00f3nica</span> y pasi\u00f3n por la IA, conecto el hardware complejo con el software inteligente.',
+          about_p2: "Me especializo en construir arquitecturas serverless y modelos de machine learning que resuelven problemas reales. Mi enfoque se basa en la precisi\u00f3n de la ingenier\u00eda y la resoluci\u00f3n creativa de problemas.",
           philosophy_title: "La Filosof\u00eda",
-          philosophy_quote:
-            '"El software no deber\u00eda solo existir; deber\u00eda evolucionar. Construyo sistemas que no solo son funcionales, sino resilientes y preparados para el futuro."',
+          philosophy_quote: '"El software no deber\u00eda solo existir; deber\u00eda evolucionar. Construyo sistemas que no solo son funcionales, sino resilientes y preparados para el futuro."',
           stat_years: "A\u00f1os exp.",
           stat_projects: "Proyectos",
           stat_uptime: "Meta uptime",
           skills_title: "Arsenal T\u00e9cnico",
-          skills_subtitle:
-            "Herramientas y frameworks que uso para dar vida a las ideas",
+          skills_subtitle: "Herramientas y frameworks que uso para dar vida a las ideas",
           skill_backend: "Backend & L\u00f3gica",
           skill_ai: "IA & Machine Learning",
           skill_cloud: "Cloud & DevOps",
           projects_title: "Proyectos Destacados",
-          projects_subtitle:
-          "Trabajo reciente en IA y arquitectura de sistemas",
-          projects_github:
-            'Ver todo en GitHub <span class="material-symbols-outlined text-sm">open_in_new</span>',
-          
+          projects_subtitle: "Trabajo reciente en IA y arquitectura de sistemas",
+          projects_github: 'Ver todo en GitHub <span class="material-symbols-outlined text-sm">open_in_new</span>',
           proj1_title: "Plataforma de orquestación multiagente",
-          proj1_desc:
-            "Sistema multi‑agente que enruta consultas, recupera datos relevantes y genera respuestas fundamentadas.",
-          proj1_features: `
-            <li>• Enrutamiento inteligente de consultas</li>
-            <li>• Pipeline de recuperación basado en RAG</li>
-            <li>• Generación de respuestas estructuradas</li>
-          `,
-          proj1_arch_note:
-            "Nota de arquitectura: Este proyecto está diseñado intencionalmente como una base modular de orquestación, no como una aplicación de propósito único. Sirve como fundamento reutilizable para construir distintos sistemas de IA (asistentes RAG, agentes de programación, analistas de datos) intercambiando agentes, herramientas y estrategias sin modificar la arquitectura central.",
-          
-            proj2_title: "Asistente de Conocimiento con IA (RAG)",
-            proj2_desc:
-              "Asistente de IA que utiliza un pipeline RAG completo para ingerir, indexar y consultar documentos localmente con total privacidad.",
-            proj2_features: `
-            <li>• Ingesta e indexación de documentos</li>
-            <li>• Búsqueda semántica (RAG)</li>
-            <li>• LLM local (privacidad total)</li>
-          `,
-          proj2_arch_note:
-            "Nota de arquitectura: El sistema utiliza un pipeline RAG modular con componentes independientes para carga, chunking, embeddings, recuperación y generación. Un LLM local (Qwen 2.5 vía Ollama) produce respuestas contextuales, mientras que ChromaDB gestiona el almacenamiento vectorial. La arquitectura es completamente local, enfocada en privacidad y fácilmente extensible.",
-          
+          proj1_desc: "Sistema multi‑agente que enruta consultas, recupera datos relevantes y genera respuestas fundamentadas.",
+          proj1_features: `<li>• Enrutamiento inteligente de consultas</li><li>• Pipeline de recuperación basado en RAG</li><li>• Generación de respuestas estructuradas</li>`,
+          proj1_arch_note: "Nota de arquitectura: Este proyecto está diseñado intencionalmente como una base modular de orquestación, no como una aplicación de propósito único. Sirve como fundamento reutilizable para construir distintos sistemas de IA (asistentes RAG, agentes de programación, analistas de datos) intercambiando agentes, herramientas y estrategias sin modificar la arquitectura central.",
+          proj2_title: "Asistente de Conocimiento con IA (RAG)",
+          proj2_desc: "Asistente de IA que utiliza un pipeline RAG completo para ingerir, indexar y consultar documentos localmente con total privacidad.",
+          proj2_features: `<li>• Ingesta e indexación de documentos</li><li>• Búsqueda semántica (RAG)</li><li>• LLM local (privacidad total)</li>`,
+          proj2_arch_note: "Nota de arquitectura: El sistema utiliza un pipeline RAG modular con componentes independientes para carga, chunking, embeddings, recuperación y generación. Un LLM local (Qwen 2.5 vía Ollama) produce respuestas contextuales, mientras que ChromaDB gestiona el almacenamiento vectorial. La arquitectura es completamente local, enfocada en privacidad y fácilmente extensible.",
           proj3_title: "Analista de Datos con IA",
-          proj3_desc:
-            "Pipeline de análisis de datos multi‑agente que genera insights, visualizaciones y reportes interactivos a partir de datos.",
-          proj3_features: `
-            <li>• Orquestación de flujos multi‑agente</li>
-            <li>• Insights y visualizaciones automáticas</li>
-            <li>• Generación de reportes HTML interactivos</li>
-          `,
-          proj3_arch_note:
-            "Nota de arquitectura: El sistema aplica una separación estricta de responsabilidades mediante agentes independientes y un flujo de estado tipado, permitiendo escalar o reemplazar módulos sin afectar el núcleo. Su diseño desacoplado y la exposición dual (CLI/API) reflejan cómo la modularidad, las pruebas automatizadas y la infraestructura como código garantizan mantenibilidad, integración continua y despliegue confiable en entornos productivos.",          
-          
-          
+          proj3_desc: "Pipeline de análisis de datos multi‑agente que genera insights, visualizaciones y reportes interactivos a partir de datos.",
+          proj3_features: `<li>• Orquestación de flujos multi‑agente</li><li>• Insights y visualizaciones automáticas</li><li>• Generación de reportes HTML interactivos</li>`,
+          proj3_arch_note: "Nota de arquitectura: El sistema aplica una separación estricta de responsabilidades mediante agentes independientes y un flujo de estado tipado, permitiendo escalar o reemplazar módulos sin afectar el núcleo. Su diseño desacoplado y la exposición dual (CLI/API) reflejan cómo la modularidad, las pruebas automatizadas y la infraestructura como código garantizan mantenibilidad, integración continua y despliegue confiable en entornos productivos.",
           proj4_title: "Asistente de Programación con IA",
-          proj4_desc:
-            "Asistente de programación multi‑agente que analiza, optimiza y documenta código automáticamente.",
-          proj4_features: `
-            <li>• Análisis de código basado en AST</li>
-            <li>• Optimización y refactorización automática</li>
-            <li>• Generación de documentación</li>
-          `,
-          proj4_arch_note:
-            "Nota de arquitectura: El proyecto implementa una arquitectura modular con agentes especializados y un Supervisor que coordina el flujo. El uso de un objeto de estado compartido y capas bien definidas facilita la extensibilidad, el mantenimiento y la integración futura con modelos LLM locales.",
-          
+          proj4_desc: "Asistente de programación multi‑agente que analiza, optimiza y documenta código automáticamente.",
+          proj4_features: `<li>• Análisis de código basado en AST</li><li>• Optimización y refactorización automática</li><li>• Generación de documentación</li>`,
+          proj4_arch_note: "Nota de arquitectura: El proyecto implementa una arquitectura modular con agentes especializados y un Supervisor que coordina el flujo. El uso de un objeto de estado compartido y capas bien definidas facilita la extensibilidad, el mantenimiento y la integración futura con modelos LLM locales.",
           personality_title: "El desarrollador detr\u00e1s del c\u00f3digo",
-          personality_desc:
-            'Creo que la gran ingenier\u00eda comienza con un gran entorno. Aporto una energ\u00eda <span class="text-primary font-bold">relajada, motivada y acogedora</span> a cada equipo al que me uno. Ya sea depurando una condici\u00f3n de carrera complicada o dise\u00f1ando un nuevo pipeline de ML, soy quien asegura que sigamos avanzando con una sonrisa y una soluci\u00f3n.',
+          personality_desc: 'Creo que la gran ingenier\u00eda comienza con un gran entorno. Aporto una energ\u00eda <span class="text-primary font-bold">relajada, motivada y acogedora</span> a cada equipo al que me uno. Ya sea depurando una condici\u00f3n de carrera complicada o dise\u00f1ando un nuevo pipeline de ML, soy quien asegura que sigamos avanzando con una sonrisa y una soluci\u00f3n.',
           trait_coffee: "Admirador del ajedrez",
           trait_collab: "Esp\u00edritu colaborativo",
           trait_solution: "Orientado a soluciones",
           contact_title: "\u00bfListo para construir algo incre\u00edble?",
-          contact_desc:
-            "Actualmente abierto a nuevas oportunidades y proyectos de IA interesantes. Hablemos de c\u00f3mo puedo ayudar a tu equipo.",
-          contact_email:
-            '<span class="material-symbols-outlined">send</span> Enviar un email',
-          nav_home: "Inicio",
-          nav_work: "Trabajo",
-          nav_about: "Sobre m\u00ed",
-          nav_contact: "Contacto",
-          footer:
-            "&copy; 2026 Portfolio Desarrollador IA. Hecho con pasi\u00f3n y Python.",
+          contact_desc: "Actualmente abierto a nuevas oportunidades y proyectos de IA interesantes. Hablemos de c\u00f3mo puedo ayudar a tu equipo.",
+          contact_email: '<span class="material-symbols-outlined">send</span> Enviar un email',
+          footer: "&copy; 2026 Portfolio Desarrollador IA. Hecho con pasi\u00f3n y Python.",
           resume_tooltip: "La descarga del currículum respeta el idioma actual",
-          },
+        },
       };
 
       let currentLang = "en";
@@ -1149,15 +595,15 @@
         btn.addEventListener("click", () => applyLang(btn.dataset.lang));
       });
 
-      // Initialize language on page load
       applyLang(currentLang);
     </script>
-        <!-- Floating Chat Widget -->
+
+    <!-- Floating Chat Widget - IDENTICAL ON WEB AND MOBILE -->
     <div id="floating-chat">
-      <button id="chat-toggle" class="fixed bottom-4 right-4 bg-primary text-white rounded-full p-3 shadow-lg z-50 hover:bg-primary/90 transition-all">
+      <button id="chat-toggle" class="fixed bottom-4 right-4 bg-primary text-white rounded-full p-3 shadow-lg z-[60] hover:bg-primary/90 transition-all">
         <span class="material-symbols-outlined">chat</span>
       </button>
-      <div id="chat-panel" class="fixed bottom-20 right-4 w-96 max-h-[70vh] bg-background-dark glass-card rounded-3xl shadow-2xl z-40 transform translate-y-[calc(100%+2rem)] transition-transform duration-300 overflow-hidden flex flex-col">
+      <div id="chat-panel" class="fixed bottom-20 right-4 w-96 max-w-[calc(100vw-2rem)] max-h-[70vh] bg-background-dark glass-card rounded-3xl shadow-2xl z-[55] transform translate-y-[calc(100%+2rem)] transition-transform duration-300 overflow-hidden flex flex-col">
         <main class="flex flex-col flex-1 overflow-hidden">
           <div class="text-center mb-4 pt-4 px-4">
             <h1 id="chat-title" class="text-2xl font-extrabold tracking-tight">
@@ -1167,19 +613,8 @@
           </div>
           <div id="chat-messages" class="chat flex-1 overflow-y-auto space-y-3 px-4 py-2"></div>
           <form id="chat-ask-form" class="flex gap-2 px-4 pb-4">
-            <input
-              type="text"
-              id="chat-question"
-              placeholder="Ask a question..."
-              autocomplete="off"
-              required
-              class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
-            >
-            <button
-              type="submit"
-              id="chat-send-btn"
-              class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-2xl transition-all shadow-lg shadow-primary/20 flex items-center gap-1"
-            >
+            <input type="text" id="chat-question" placeholder="Ask a question..." autocomplete="off" required class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all">
+            <button type="submit" id="chat-send-btn" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-2xl transition-all shadow-lg shadow-primary/20 flex items-center gap-1">
               <span class="material-symbols-outlined text-sm">send</span>
             </button>
           </form>
@@ -1193,18 +628,18 @@
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
-      #floating-chat .ai-glow { 
-        box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3); 
+      #floating-chat .ai-glow {
+        box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3);
       }
-      #floating-chat .chat::-webkit-scrollbar { 
-        width: 6px; 
+      #floating-chat .chat::-webkit-scrollbar {
+        width: 6px;
       }
-      #floating-chat .chat::-webkit-scrollbar-track { 
-        background: transparent; 
+      #floating-chat .chat::-webkit-scrollbar-track {
+        background: transparent;
       }
-      #floating-chat .chat::-webkit-scrollbar-thumb { 
-        background: rgba(255,255,255,0.1); 
-        border-radius: 3px; 
+      #floating-chat .chat::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.1);
+        border-radius: 3px;
       }
     </style>
 
@@ -1217,35 +652,15 @@
         const panel = document.getElementById("chat-panel");
 
         const i18n = {
-          en: {
-            title: "Agent",
-            subtitle: "Ask questions about me",
-            placeholder: "Ask a question...",
-            greeting: "Hi there! This is Carlos. What do you want to know about me?",
-            errorConnect: "Error connecting to server."
-          },
-          fr: {
-            title: "Agent",
-            subtitle: "Posez-moi des questions",
-            placeholder: "Posez une question...",
-            greeting: "Bonjour ! Je suis Carlos. Que voulez-vous savoir sur moi ?",
-            errorConnect: "Erreur de connexion au serveur."
-          },
-          es: {
-            title: "Agente",
-            subtitle: "Hazme preguntas",
-            placeholder: "Haz una pregunta...",
-            greeting: "¡Hola! Soy Carlos. ¿Qué quieres saber sobre mí?",
-            errorConnect: "Error al conectar con el servidor."
-          }
+          en: { title: "Agent", subtitle: "Ask questions about me", placeholder: "Ask a question...", greeting: "Hi there! This is Carlos. What do you want to know about me?", errorConnect: "Error connecting to server." },
+          fr: { title: "Agent", subtitle: "Posez-moi des questions", placeholder: "Posez une question...", greeting: "Bonjour ! Je suis Carlos. Que voulez-vous savoir sur moi ?", errorConnect: "Erreur de connexion au serveur." },
+          es: { title: "Agente", subtitle: "Hazme preguntas", placeholder: "Haz una pregunta...", greeting: "¡Hola! Soy Carlos. ¿Qué quieres saber sobre mí?", errorConnect: "Error al conectar con el servidor." }
         };
 
         let currentLang = document.documentElement.lang || "en";
         let suggestionPool = [];
 
-        function t(key) {
-          return i18n[currentLang][key];
-        }
+        function t(key) { return i18n[currentLang][key]; }
 
         function addMessage(content, cls) {
           const div = document.createElement("div");
@@ -1271,19 +686,14 @@
         function showSuggestions() {
           removeChips();
           const toShow = suggestionPool.splice(0, 2);
-          if (toShow.length === 0) {
-            return;
-          }
+          if (toShow.length === 0) return;
           const wrapper = document.createElement("div");
           wrapper.className = "suggestions flex flex-wrap gap-2 mt-2 px-2";
           toShow.forEach(q => {
             const chip = document.createElement("button");
             chip.className = "px-2 py-1 rounded-full text-xs font-bold border border-primary/30 text-primary bg-primary/5 hover:bg-primary/20 transition-all cursor-pointer";
             chip.textContent = q;
-            chip.addEventListener("click", () => {
-              removeChips();
-              handleQuestion(q);
-            });
+            chip.addEventListener("click", () => { removeChips(); handleQuestion(q); });
             wrapper.appendChild(chip);
           });
           chat.appendChild(wrapper);
@@ -1293,11 +703,7 @@
         async function handleQuestion(question) {
           addMessage(question, "user");
           try {
-            const res = await fetch("/ask", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ question, lang: currentLang }),
-            });
+            const res = await fetch("/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question, lang: currentLang }) });
             const data = await res.json();
             if (data.error) {
               addMessage(data.error, "error");
@@ -1315,9 +721,7 @@
           try {
             const res = await fetch("/suggestions?lang=" + currentLang);
             const data = await res.json();
-            if (data.suggestions) {
-              suggestionPool = data.suggestions.slice(0, 5);
-            }
+            if (data.suggestions) suggestionPool = data.suggestions.slice(0, 5);
           } catch (e) {}
           showSuggestions();
         }
@@ -1337,7 +741,6 @@
           loadSuggestions();
         }
 
-        // Listen to portfolio language changes
         const originalApplyLang = window.applyLang || function() {};
         window.applyLang = function(lang) {
           originalApplyLang(lang);
@@ -1361,32 +764,26 @@
           handleQuestion(question);
         });
 
-        return {
-          updateLanguage
-        };
+        return { updateLanguage };
       })();
     </script>
-    
+
     <script>
       const resumeLink = document.getElementById("resume-link");
-      
       let currentPortfolioLang = "en";
-      
       const originalApplyLang = window.applyLang || function() {};
       window.applyLang = function(lang) {
         currentPortfolioLang = lang;
         originalApplyLang(lang);
       };
-
-      // Button handler for resume download that respects current language
       resumeLink.addEventListener("click", (e) => {
         e.preventDefault();
         window.location.href = `/resume/${currentPortfolioLang}`;
       });
-
       currentPortfolioLang = document.documentElement.lang || "en";
     </script>
 
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a23896589e474219b11e0ce90888577a"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a23896589e474219b11e0ce90888577a"}'></script>
   </body>
 </html>
